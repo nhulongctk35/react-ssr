@@ -1,10 +1,8 @@
 const React = require('react');
-const ReactDOM = require('react-dom')
+const ReactDOM = require('react-dom');
 
 function App() {
-    return (
-        <h2>Hello React App</h2>
-    )
-};
+  return <h2>Hello React App</h2>;
+}
 
-module.exports = App;
+ReactDOM.render(<App />, document.getElementById('root'));

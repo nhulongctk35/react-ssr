@@ -1,9 +1,20 @@
 module.exports = {
   entry: {
-    app: "./components/app.js"
+    app: './components/app.js',
   },
   output: {
-    filename: "bundle.js",
-    path: __dirname + "/dist"
-  }
+    filename: 'bundle.js',
+    path: __dirname + '/public',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+    ],
+  },
 };
