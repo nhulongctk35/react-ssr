@@ -4,13 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "webpack": "webpack --mode=development",
+    "webpack": "webpack --mode=development -wd",
     "webpack:prod": "webpack -p",
     "start": "pm2 start ./lib/server.js --watch --interpreter babel-node",
     "test": "jest --watch",
     "build": "webpack --mode=production"
   },
   "dependencies": {
+    "@babel/runtime": "^7.1.5",
     "axios": "^0.18.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
@@ -20,6 +21,8 @@
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/node": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^23.6.0",

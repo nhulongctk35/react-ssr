@@ -11,7 +11,7 @@ module.exports = {
   },
   entry: {
     vendor: ['react', 'react-dom', 'axios'],
-    app: './components/app.js',
+    app: './lib/client-render.js',
   },
   output: {
     filename: '[name].js',

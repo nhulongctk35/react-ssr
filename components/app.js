@@ -10,10 +10,13 @@ class App extends React.Component {
     };
   }
 
+  asyncFunction = () => {
+    return Promise.resolve(48);
+  };
+
   async componentDidMount() {
-    const rawData = await axios.get(
-      `${process.env.HOST}:${process.env.port}/api/articles`
-    );
+    const value = await this.asyncFunction();
+    console.log(value);
   }
 
   render() {
