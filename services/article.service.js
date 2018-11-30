@@ -1,7 +1,14 @@
+import axios from 'axios';
+
 class ArticleService {
-  constructor(rawData) {
-    this.rawData = rawData;
+  constructor(data) {
+    this.rawData = data;
   }
+  fetchArticle = async () => {
+    const { data } = await axios.get(`http://localhost:3000/api/articles`);
+    this.rawData = data.data;
+    return this.rawData;
+  };
 
   mapArrayToObject(dataArr = []) {
     return dataArr.reduce((acc, current) => {

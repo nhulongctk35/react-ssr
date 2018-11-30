@@ -10,7 +10,6 @@ module.exports = {
     ],
   },
   entry: {
-    vendor: ['react', 'react-dom', 'axios'],
     app: './lib/client-render.js',
   },
   output: {

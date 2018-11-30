@@ -8,7 +8,11 @@ export default class ArticleList extends PureComponent {
         <h2>Article list</h2>
         <div>
           {Object.values(this.props.articles).map(article => (
-            <Article key={article.id} data={article} />
+            <Article
+              author={this.props.getAuthorDetail(article.authorId)}
+              key={article.id}
+              data={article}
+            />
           ))}
         </div>
       </div>
