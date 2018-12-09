@@ -1,5 +1,7 @@
 ## Demo React SSR (Server Side Rendering)
 
+![alt text](static/ssr-result.png "The overview of result")
+
 ### Install dependencies
 ``npm install or yarn install``
 
